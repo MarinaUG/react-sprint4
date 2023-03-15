@@ -15,7 +15,38 @@ function getMoviesFromDirector(movies, director) {
 }
 
 // Exercise 3: Calculate the average of the films of a given director.
-function moviesAverageOfDirector(array, director) {
+
+function average(array){
+  const averageNumber=Number((array.reduce( (acc, item) => Number(acc)+Number(item.score), 0) /array.length).toFixed(2));
+  console.log ("mitja",averageNumber);
+  return averageNumber;
+}
+
+function moviesAverageOfDirector(movies, director) {
+  const movieDirector=getMoviesFromDirector(movies, director);
+  const result=average(movieDirector);
+  console.log("Exercici 3", result);
+  return result;
+
+  /* let r=0, p=0;
+  const movieDirector=getMoviesFromDirector(movies, director);
+  const result=movieDirector.reduce( (acc,item) => {
+    
+    console.log("score",item.score);
+    console.log("acc",acc);
+    acc=((Number(item.score)+Number(acc))/movieDirector.length).toFixed(2);
+    console.log("acc2",acc);
+     et llarg=movieDirector.length;
+    console.log("llarg",llarg);
+    r=(acc/llarg).toFixed(2);
+    p=r.toFixed(2);
+    console.log("r",r);
+    console.log("p",p); 
+    return acc;
+  },0);
+
+console.log("Exercici 3", result);
+return result; */
   
 }
 
