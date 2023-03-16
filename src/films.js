@@ -27,32 +27,17 @@ function moviesAverageOfDirector(movies, director) {
   const result=average(movieDirector);
   console.log("Exercici 3", result);
   return result;
-
-  /* let r=0, p=0;
-  const movieDirector=getMoviesFromDirector(movies, director);
-  const result=movieDirector.reduce( (acc,item) => {
-    
-    console.log("score",item.score);
-    console.log("acc",acc);
-    acc=((Number(item.score)+Number(acc))/movieDirector.length).toFixed(2);
-    console.log("acc2",acc);
-     et llarg=movieDirector.length;
-    console.log("llarg",llarg);
-    r=(acc/llarg).toFixed(2);
-    p=r.toFixed(2);
-    console.log("r",r);
-    console.log("p",p); 
-    return acc;
-  },0);
-
-console.log("Exercici 3", result);
-return result; */
-  
-}
+ }
 
 // Exercise 4:  Alphabetic order by title 
-function orderAlphabetically(array) {
-  
+function orderAlphabetically(movies) {
+const movie=movies.map(item=>item.title);
+movie.sort(); 
+if (movie.length>20){
+  movie.length=20;
+}
+console.log("Exercici 4", movie);
+return movie;
 }
 
 // Exercise 5: Order by year, ascending
