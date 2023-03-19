@@ -84,6 +84,7 @@ const moviesDuration = movies.map(item => {
     duration: minuts
   }
 });
+
 console.log("Exercici 7", moviesDuration);
 return moviesDuration;
 } 
